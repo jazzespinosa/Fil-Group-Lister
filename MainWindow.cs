@@ -22,6 +22,16 @@ namespace Fil_Group_Lister
         {
             cbxFilterSecGroups.Text = "ALL Groups";
             cbxInheritance.Text = "ALL";
+
+            string[] args = Environment.GetCommandLineArgs();
+
+            if (args.Length > 1)
+            {
+                //MessageBox.Show($"arg {String.Join(" ", args, 1, args.Length - 1)} received");
+                tboxDirectory.Text = String.Join(" ", args, 1, args.Length - 1);
+                currentFindValue = tboxDirectory.Text;
+                btnFind_Click(sender, e);
+            }
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -179,12 +189,6 @@ namespace Fil_Group_Lister
             return dt.AsEnumerable().Count(row => row.Field<bool>(dtColumnName) == dtRowValue);
         }
 
-        private int countRows(DataTable dt, string dtColumnName1, string dtRowValue1, string dtColumnName2, string dtRowValue2)
-        {
-            return dt.AsEnumerable().Count(row => row.Field<string>(dtColumnName1) == dtRowValue1
-                                               && row.Field<string>(dtColumnName2) == dtRowValue2);
-        }
-
         private void displayTreeView(DataTable dt, DataTable dtInitial)
         {
             int i = 0;
@@ -260,6 +264,5 @@ namespace Fil_Group_Lister
             treeViewDirectory.Nodes.Clear();
             createDataTable(currentFindValue);
         }
-
     }
 }

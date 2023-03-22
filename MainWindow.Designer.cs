@@ -65,7 +65,7 @@ namespace Fil_Group_Lister
             this.tboxDirectory.Name = "tboxDirectory";
             this.tboxDirectory.Size = new System.Drawing.Size(259, 23);
             this.tboxDirectory.TabIndex = 1;
-            this.tboxDirectory.SizeChanged += tboxDirectory_SizeChanged;
+            this.tboxDirectory.SizeChanged += new System.EventHandler(this.tboxDirectory_SizeChanged);
             // 
             // btnFind
             // 
@@ -77,7 +77,7 @@ namespace Fil_Group_Lister
             this.btnFind.TabIndex = 2;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += btnFind_Click;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // treeViewDirectory
             // 
@@ -90,7 +90,7 @@ namespace Fil_Group_Lister
             this.treeViewDirectory.Name = "treeViewDirectory";
             this.treeViewDirectory.Size = new System.Drawing.Size(399, 315);
             this.treeViewDirectory.TabIndex = 3;
-            this.treeViewDirectory.NodeMouseDoubleClick += treeViewDirectory_NodeMouseDoubleClick;
+            this.treeViewDirectory.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewDirectory_NodeMouseDoubleClick);
             // 
             // labelSecGroups
             // 
@@ -114,7 +114,7 @@ namespace Fil_Group_Lister
             this.cbxFilterSecGroups.Name = "cbxFilterSecGroups";
             this.cbxFilterSecGroups.Size = new System.Drawing.Size(121, 25);
             this.cbxFilterSecGroups.TabIndex = 8;
-            this.cbxFilterSecGroups.SelectedIndexChanged += cbxFilterSecGroups_SelectedIndexChanged;
+            this.cbxFilterSecGroups.SelectedIndexChanged += new System.EventHandler(this.cbxFilterSecGroups_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -142,7 +142,7 @@ namespace Fil_Group_Lister
             this.cbxInheritance.Name = "cbxInheritance";
             this.cbxInheritance.Size = new System.Drawing.Size(131, 25);
             this.cbxInheritance.TabIndex = 10;
-            this.cbxInheritance.SelectedIndexChanged += cbxInheritance_SelectedIndexChanged;
+            this.cbxInheritance.SelectedIndexChanged += new System.EventHandler(this.cbxInheritance_SelectedIndexChanged);
             // 
             // labelInheritance
             // 
@@ -172,7 +172,7 @@ namespace Fil_Group_Lister
             this.MinimumSize = new System.Drawing.Size(430, 450);
             this.Name = "MainWindow";
             this.Text = "Fil Group Lister";
-            this.Load += MainWindow_Load;
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
