@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>unnamed %284%29.ico</ApplicationIcon>
+    <ApplicationIcon>fil-group-lister-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
@@ -125,7 +125,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="unnamed %284%29.ico" />
+    <Content Include="fil-group-lister-icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="icons8-tools-65.ico">

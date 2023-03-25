@@ -27,7 +27,6 @@ namespace Fil_Group_Lister
 
             if (args.Length > 1)
             {
-                //MessageBox.Show($"arg {String.Join(" ", args, 1, args.Length - 1)} received");
                 tboxDirectory.Text = String.Join(" ", args, 1, args.Length - 1);
                 currentFindValue = tboxDirectory.Text;
                 btnFind_Click(sender, e);
@@ -114,7 +113,7 @@ namespace Fil_Group_Lister
                 folderPath = folderPath.Substring(0, folderPath.Length - (lastFolder.Length + 1)); //get next folder path
 
                 count--;
-            } while (count > 0);
+            } while (count > 1);
 
             filterDataTable(dt);
         }
@@ -241,7 +240,6 @@ namespace Fil_Group_Lister
                 }
                 Clipboard.SetText(selectedNode);
             }
-
         }
 
         private void cbxFilterSecGroups_SelectedIndexChanged(object sender, EventArgs e)
